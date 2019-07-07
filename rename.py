@@ -10,8 +10,7 @@ import os
 
 def main():
     target_file = sys.argv[1]
-    new_file_name = target_file.lower()
-    new_file_name = new_file_name.replace(' ', '-')
+    new_file_name = target_file.lower().replace(' ', '-')
     os.rename(target_file, new_file_name)
     
 if __name__ == "__main__":
