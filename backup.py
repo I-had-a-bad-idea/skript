@@ -9,11 +9,13 @@ import sys
 import shutil
 import os
 
+
 def main():
     src = sys.argv[1]
-    dst = os.environ['HOME'] + "/Documents/config-files/"
+    dst = os.environ['HOME'] + '/Documents/config-files/'
     shutil.copy2(src, dst)
     # Confirm file was copied/updated
-    
-if __name__ == "__main__":
+
+
+if __name__ == '__main__':
     main()
