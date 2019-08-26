@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # done.py
-# Tags a file as done (listening, watching, etc.).
+# Tags a file as done.
 #
 # Created by Billy Arante <arantebillywilson@gmail.com>
 
@@ -10,7 +10,6 @@ import os
 
 
 def main():
-    file = None
     if len(sys.argv) > 1:
         file = os.path.basename(sys.argv[1])
         filename = os.path.splitext(file)[0]
