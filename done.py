@@ -16,9 +16,9 @@ def main():
         extension = os.path.splitext(file)[1]
         new_filename = '{}-[done]{}'.format(filename, extension)
         os.rename(file, new_filename)
-        print('file tagged as done')
+        print('File tagged as done.')
     else:
-        print('provide target file')
+        print('Provide target file.')
 
 
 if __name__ == '__main__':
