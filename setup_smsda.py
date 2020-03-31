@@ -16,6 +16,10 @@ def main():
     # Documentation
     webbrowser.open('https://docs.google.com/document/d/1ch2rQPegf52Bx8ESlJkv9beKWMAxh1lrWH4CPnsYD1c/edit')
 
+    # PHPMyAdmin
+    os.system('sudo /opt/lampp/lampp start')
+    webbrowser.open('http://localhost/phpmyadmin')
+
     # Web app for admin
     webbrowser.open_new('http://localhost:8000');
 
