@@ -10,6 +10,9 @@ import webbrowser
 import os
 
 def main():
+	# xampp
+    os.system('sudo /opt/lampp/lampp start')
+
     # notes
     webbrowser.open('https://docs.google.com/document/d/1dFzUfaxnbzKsrsyQ2CEq2zpT0-o5HlzHeTXK8pI_QMg/edit#heading=h.u65jai413vty')
 
@@ -17,14 +20,13 @@ def main():
     webbrowser.open('https://docs.google.com/document/d/1ch2rQPegf52Bx8ESlJkv9beKWMAxh1lrWH4CPnsYD1c/edit')
 
     # phpmyadmin
-    os.system('sudo /opt/lampp/lampp start')
     webbrowser.open('http://localhost/phpmyadmin')
 
     # admin
     webbrowser.open_new('http://localhost:8000');
 
     # users
-    os.system('/usr/bin/google-chrome -incognito http://localhost:8000')
+    os.system('google-chrome -incognito http://localhost:8000')
 
     # tmux
     os.system('tmux new-session -d -s \'SMSDA\'')
