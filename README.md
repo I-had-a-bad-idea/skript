@@ -4,7 +4,7 @@ A personal collection of custom Python scripts.
 
 ## To-Do List
 
-- Create a --help or -h option for `append_filename.py`.
+- Create a `--help` or `-h` option for `append_filename.py`.
 
 ---
 
