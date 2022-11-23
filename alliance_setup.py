@@ -22,15 +22,15 @@ def main():
 
     os.system("tmux new-session -d -s 'alliance'")
 
-    change_path(project_path)
+    change_path(f"{project_path}/oauth/")
     os.system("tmux send-keys 'clear' C-m")
 
     os.system("tmux split-window -h")
-    change_path(project_path)
+    change_path(f"{project_path}/synflo-api/")
     os.system("tmux send-keys 'clear' C-m")
 
     os.system("tmux split-window -v")
-    change_path(project_path)
+    change_path(f"{project_path}/synflo-ui/")
     os.system("tmux send-keys 'clear' C-m")
 
     os.system("tmux select-pane -L")
