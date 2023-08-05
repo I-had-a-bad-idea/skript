@@ -1,6 +1,6 @@
-# scripts
+# autoscripts
 
-A collection of custom automation scripts for daily repeatable tasks.
+A collection of my personal and work automation scripts for routine tasks.
 
 ## Setup
 
