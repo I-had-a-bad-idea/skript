@@ -1,4 +1,4 @@
-# autoscripts
+# skipt
 
 A collection of my personal and work automation scripts for routine tasks.
 
