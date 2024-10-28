@@ -1,18 +1,29 @@
-# skipt
+# skript
 
-A collection of my personal and work automation scripts for routine tasks.
+A collection of personal automation scripts for my known-repeatable tasks.
 
 ## Setup
 
-- Create a symbolic link of a script.
-  ```
-  ln -s <source> <destination> 
-  ```
+- Create a new symbolic link of a script, or update an existing one.
+
+```console
+// create
+ln -s source-path destination-path
+
+// update
+ln -sf source-path destination-path
+```
+
+NOTE: Enter the full path for the `source` and `destination` paths.
+
 - Make the script file executable.
-  ```
-  chmod +x <file>
-  ```
-  Or,
-  ```
-  chmod 755 <file>
-  ```
+
+```console
+chmod +x file
+```
+
+Or,
+
+```console
+chmod 755 file
+```
