@@ -9,23 +9,30 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--size", type=int, required=False)
     parser.add_argument("--name", type=str, required=False)
+    parser.add_argument("--count", type=int, required=False)
     args = parser.parse_args()
 
-    output_file = args.name or "dummy.pdf"
     total_size = (args.size or 8) * 1024 * 1024
+    file_count = args.count or 1
 
-    header = b"%PDF-1.4\n"
-    footer = b"\n%%EOF"
+    for i in range(file_count):
+        if (i == 0):
+            output_file = f"{args.name}.pdf" if args.name else "dummy.pdf"
+        else:
+            output_file = f"{args.name}_{i}.pdf" if args.name else f"dummy_{i}.pdf"
 
-    filler_size = total_size - len(header) - len(footer)
-    filler = b"0" * filler_size
+        header = b"%PDF-1.4\n"
+        footer = b"\n%%EOF"
 
-    with open(output_file, "wb") as f:
-        f.write(header)
-        f.write(filler)
-        f.write(footer)
+        filler_size = total_size - len(header) - len(footer)
+        filler = b"0" * filler_size
 
-    print(f"new {output_file} file created")
+        with open(output_file, "wb") as f:
+            f.write(header)
+            f.write(filler)
+            f.write(footer)
+
+        print(f"new {output_file} file created")
 
 
 if __name__ == "__main__":
