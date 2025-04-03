@@ -8,10 +8,11 @@ def main():
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("--size", type=int, required=False)
+    parser.add_argument("--name", type=str, required=False)
     args = parser.parse_args()
 
-    output_file = "dummy.pdf"
-    total_size = args.size * 1024 * 1024
+    output_file = args.name or "dummy.pdf"
+    total_size = (args.size or 8) * 1024 * 1024
 
     header = b"%PDF-1.4\n"
     footer = b"\n%%EOF"
