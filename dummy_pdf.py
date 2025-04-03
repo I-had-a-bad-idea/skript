@@ -1,10 +1,17 @@
+import argparse
+
+
 def main():
     """
     A dummy PDF file generator.
     For now, it generates an 8MB file size of PDF with garbage data.
     """
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--size", type=int, required=False)
+    args = parser.parse_args()
+
     output_file = "dummy.pdf"
-    total_size = 8 * 1024 * 1024
+    total_size = args.size * 1024 * 1024
 
     header = b"%PDF-1.4\n"
     footer = b"\n%%EOF"
