@@ -1,10 +1,8 @@
-#
-# A dummy PDF file generator.
-# For now, it generates an 8MB file size of PDF with garbage data.
-#
-
-
 def main():
+    """
+    A dummy PDF file generator.
+    For now, it generates an 8MB file size of PDF with garbage data.
+    """
     output_file = "dummy.pdf"
     total_size = 8 * 1024 * 1024
 
