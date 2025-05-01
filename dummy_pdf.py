@@ -4,7 +4,6 @@ import argparse
 def main():
     """
     A dummy PDF file generator.
-    For now, it generates an 8MB file size of PDF with garbage data.
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("--size", type=int, required=False)
