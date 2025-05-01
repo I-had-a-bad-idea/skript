@@ -15,7 +15,7 @@ def main():
     file_count = args.count or 1
 
     for i in range(file_count):
-        if (i == 0):
+        if i == 0:
             output_file = f"{args.name}.pdf" if args.name else "dummy.pdf"
         else:
             output_file = f"{args.name}_{i}.pdf" if args.name else f"dummy_{i}.pdf"
