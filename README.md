@@ -1,29 +1,15 @@
 # skript
 
-A collection of personal automation scripts for my known-repeatable tasks.
+A collection of personal shell and Python scripts for my daily repeatable
+tasks.
 
-## Setup
-
-- Create a new symbolic link of a script, or update an existing one.
+## Getting Started
 
 ```console
-// create
-ln -s source-path destination-path
-
-// update
-ln -sf source-path destination-path
+git clone git@github.com:arantebw/skript.git ~/skript
 ```
 
-NOTE: Enter the full path for the `source` and `destination` paths.
-
-- Make the script file executable.
-
-```console
-chmod +x file
-```
-
-Or,
-
-```console
-chmod 755 file
+```bash
+export PATH="$HOME/skript/python-scripts/:$PATH"
+export PATH="$HOME/skript/shell-scripts/:$PATH"
 ```
