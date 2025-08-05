@@ -1,5 +1,21 @@
 #!/bin/bash
 
-# Delete all local branches except the main branch
-git branch | grep -v 'main' | xargs git branch -D
+# Usage: ./delete_other_branches_except_main [branch1] [branch2] ...
+# If no arguments provided, defaults to keeping only 'main'
+
+# If no arguments provided, default to keeping 'main'
+if [ $# -eq 0 ]; then
+    KEEP_BRANCHES="main"
+else
+    # Join all arguments with | for regex pattern
+    KEEP_BRANCHES=$(printf '%s|' "$@" | sed 's/|$//')
+fi
+
+echo "Keeping branches: $KEEP_BRANCHES"
+echo "Deleting all other local branches..."
+
+# Delete all local branches except the specified ones
+git branch | grep -vE "($KEEP_BRANCHES)" | xargs git branch -D
+
+echo "Branch cleanup completed!"
 
